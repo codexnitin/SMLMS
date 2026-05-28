@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+/* --------------------------------------------------------------------------
+   LIGHT THEME DESIGN MAPPINGS (SPECIFICITY-GUARDED UTILITY OVERRIDES)
+   -------------------------------------------------------------------------- */
+
+.light, .light * {
+  --color-brand: #0284c7;
+  --color-brand-muted: rgba(2, 132, 199, 0.1);
+}
+
+/* Background overrides */
+.light.bg-\[\#0A0B0E\], .light .bg-\[\#0A0B0E\] {
+  background-color: #f1f5f9 !important; /* slate-100 */
+}
+.light.bg-\[\#111318\], .light .bg-\[\#111318\] {
+  background-color: #ffffff !important; /* absolute white card */
+}
+.light.bg-\[\#0F1116\], .light .bg-\[\#0F1116\] {
+  background-color: #f8fafc !important; /* slate-50 panel */
+}
+.light.bg-\[\#1C1F26\], .light .bg-\[\#1C1F26\] {
+  background-color: #f1f5f9 !important; /* slate-100 inner */
+}
+
+/* Specific background opacities */
+.light .bg-\[\#0F1116\]\/50 {
+  background-color: rgba(248, 250, 252, 0.5) !important;
+}
+.light .bg-\[\#1C1F26\]\/10 {
+  background-color: rgba(2, 132, 199, 0.05) !important;
+}
+.light .bg-\[\#1F222B\]\/50 {
+  background-color: rgba(226, 232, 240, 0.5) !important;
+}
+.light .bg-black\/60 {
+  background-color: rgba(15, 23, 42, 0.4) !important;
+}
+.light .bg-\[\#0A0B0E\]\/80 {
+  background-color: rgba(241, 245, 249, 0.8) !important;
+}
+
+/* Active transitions & hover overrides */
+.light .hover\:bg-\[\#1C1F26\]:hover, .light .hover\:bg-\[\#2D313C\]:hover {
+  background-color: #e2e8f0 !important;
+}
+.light .hover\:bg-\[\#161920\]\/40:hover {
+  background-color: rgba(226, 232, 240, 0.5) !important;
+}
+.light .hover\:bg-\[\#161920\]\/30:hover {
+  background-color: rgba(226, 232, 240, 0.4) !important;
+}
+.light .peer-checked\:bg-\[\#00D1FF\]\/10:checked ~ *, .light .peer-checked\:bg-\[\#00D1FF\]\/10 {
+  background-color: rgba(2, 132, 199, 0.1) !important;
+}
+
+/* Boarder overrides */
+.light.border-\[\#1F222B\], .light .border-\[\#1F222B\] {
+  border-color: #e2e8f0 !important; /* slate-200 boundary */
+}
+.light.border-\[\#2D313C\], .light .border-\[\#2D313C\] {
+  border-color: #cbd5e1 !important; /* slate-300 elements */
+}
+.light .border-\[\#1F222B\]\/50 {
+  border-color: rgba(226, 232, 240, 0.6) !important;
+}
+.light .border-stone-850 {
+  border-color: #cbd5e1 !important;
+}
+.light .divide-\[\#1F222B\] > * + * {
+  border-color: #e2e8f0 !important;
+}
+
+/* Text overrides & Contrast enhancement (Accessibility compliance) */
+.light .text-stone-200 {
+  color: #1e293b !important; /* slate-800 */
+}
+.light .text-white {
+  color: #0f172a !important; /* slate-900 */
+}
+.light .text-\[\#717684\] {
+  color: #475569 !important; /* slate-600 */
+}
+.light .text-stone-300 {
+  color: #1e293b !important;
+}
+.light .text-stone-400 {
+  color: #334155 !important;
+}
+.light .text-[#E0E0E0] {
+  color: #0f172a !important;
+}
+.light .text-zinc-400 {
+  color: #475569 !important;
+}
+.light .text-slate-400 {
+  color: #475569 !important;
+}
+.light .text-stone-500 {
+  color: #64748b !important;
+}
+
+/* Primary/Brand blue text overrides for high contrast on light background */
+.light .text-\[\#00D1FF\] {
+  color: #0284c7 !important; /* sky-600 */
+}
+.light .bg-\[\#00D1FF\]\/10 {
+  background-color: rgba(2, 132, 199, 0.1) !important;
+  color: #0284c7 !important;
+}
+.light .border-\[\#00D1FF\]\/15 {
+  border-color: rgba(2, 132, 199, 0.25) !important;
+}
+.light .border-\[\#00D1FF\]\/20 {
+  border-color: rgba(2, 132, 199, 0.3) !important;
+}
+.light .shadow-\[0_0_15px_rgba\(0\,209\,255\,0\.2\)\] {
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.15) !important;
+}
+.light .shadow-\[0_0_12px_rgba\(0\,209\,255\,0\.15\)\] {
+  box-shadow: 0 4px 10px rgba(2, 132, 199, 0.1) !important;
+}
+
+/* Ensure inputs are dark typed text in light mode */
+.light input, .light select, .light textarea {
+  color: #0f172a !important;
+  background-color: #ffffff !important;
+}
+.light input::placeholder, .light textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Adjust dashboard line charts grid & ticks in light mode */
+.light .recharts-cartesian-grid-horizontal line,
+.light .recharts-cartesian-grid-vertical line {
+  stroke: #e2e8f0 !important;
+}
+.light .recharts-text {
+  fill: #64748b !important;
+}
+.light .recharts-legend-item-text {
+  color: #334155 !important;
+}
